@@ -6,5 +6,12 @@
 #define __ADS2CA1__Decode__
 
 #include <iostream>
+using namespace std;
+
+class Decode {
+public:
+  void decodeTree();
+  void writeToFile();
+};
 
 #endif /* defined(__ADS2CA1__Decode__) */

@@ -6,5 +6,17 @@
 #define __ADS2CA1__Tree__
 
 #include <iostream>
+using namespace std;
+
+class Tree {
+public:
+  void sortQueue();
+  void buildTree();
+  void treeTraversal();
+  void decodeTree();
+private:
+  string priorityQueue;
+  string traversalMap;
+};
 
 #endif /* defined(__ADS2CA1__Tree__) */

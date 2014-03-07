@@ -6,5 +6,15 @@
 #define __ADS2CA1__Encode__
 
 #include <iostream>
+using namespace std;
+
+class Encode {
+public:
+  // Bool to check if file has text
+  bool fileInput();
+  void countFrequency();
+  void createFrequencyMap();
+  void createTree();
+};
 
 #endif /* defined(__ADS2CA1__Encode__) */
