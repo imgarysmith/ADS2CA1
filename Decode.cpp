@@ -1,9 +1,5 @@
-//
-//  Decode.cpp
-//  ADS2CA1
-//
-//  Created by Gary Smith on 07/03/2014.
-//  Copyright (c) 2014 Gary Smith. All rights reserved.
-//
+// ADS2 CA1
+// Chris Nicholl - X00073131
+// Gary Francis Smith - X00080112
 
 #include "Decode.h"
