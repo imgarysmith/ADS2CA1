@@ -12,6 +12,7 @@ int main() {
 
   CharFreq freq = *new CharFreq();
   freq.countFrequency();
+  //freq.printMap();
 
   return 0;
 }

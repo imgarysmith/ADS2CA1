@@ -2,4 +2,6 @@
 // Chris Nicholl - X00073131
 // Gary Francis Smith - X00080112
 
-#include "Decode.h"
+#include "HuffmanTree.h"
+using namespace std;
+

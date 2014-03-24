@@ -19,13 +19,12 @@
 #include <iostream>
 using namespace std;
 
-// Constructor
-CharFreq::CharFreq() {
+map <char, int> freqMap;
 
-};
+// Constructor
+CharFreq::CharFreq() {};
 
 // Take input from file and count the frequency of each letter.
-// Bool return true if file exists, returns false if file doesn't exist.
 void CharFreq::countFrequency() {
   string inputText;
   ifstream inFile;
@@ -48,14 +47,17 @@ void CharFreq::countFrequency() {
     freqMap[' '] += 1;
   }
 
-  // Print out frequencies
-  for (map <char, int> :: const_iterator i = freqMap.begin();
-       i != freqMap.end(); ++i) {
-    cout << i->first << " : " << i->second << endl;
-  }
-
   // Close
   inFile.close();
 
   //return true;
 };
+
+// Print out map
+void CharFreq::printMap() {
+  
+  for (map <char, int> :: const_iterator i = freqMap.begin();
+       i != freqMap.end(); ++i) {
+  cout << i->first << " : " << i->second << endl;
+  }
+}

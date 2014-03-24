@@ -15,6 +15,8 @@ public:
   CharFreq();
   // Count frequency of each letter in file
   void countFrequency();
+  // Print frequency map
+  void printMap();
 private:
   // Map of frequencies
   map <char, int> freqMap = {{'A',0},{'a',0},{'B',0},{'b',0},{'C',0},{'c',0},
