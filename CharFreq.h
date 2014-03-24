@@ -2,21 +2,19 @@
 // Chris Nicholl - X00073131
 // Gary Francis Smith - X00080112
 
-#ifndef __ADS2CA1__Encode__
-#define __ADS2CA1__Encode__
+#ifndef __ADS2CA1__CharFreq__
+#define __ADS2CA1__CharFreq__
 
 #include <iostream>
 #include <map>
 using namespace std;
 
-class Encode {
+class CharFreq {
 public:
   // Constructor
-  Encode();
+  CharFreq();
   // Count frequency of each letter in file
   void countFrequency();
-  void createFrequencyMap();
-  void createTree();
 private:
   // Map of frequencies
   map <char, int> freqMap = {{'A',0},{'a',0},{'B',0},{'b',0},{'C',0},{'c',0},
@@ -25,7 +23,7 @@ private:
     {'M',0},{'m',0},{'N',0},{'n',0},{'O',0},{'o',0},{'P',0},{'p',0},{'Q',0},
     {'q',0},{'R',0},{'r',0},{'S',0},{'s',0},{'T',0},{'t',0},{'U',0},{'u',0},
     {'V',0},{'v',0},{'W',0},{'w',0},{'X',0},{'x',0},{'Y',0},{'y',0},{'Z',0},
-    {'z',0},{' ',0}};
+    {'z',0},{' ',-1}};
 };
 
-#endif /* defined(__ADS2CA1__Encode__) */
+#endif /* defined(__ADS2CA1__CharFreq__) */

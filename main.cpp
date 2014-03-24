@@ -2,7 +2,7 @@
 // Chris Nicholl - X00073131
 // Gary Francis Smith - X00080112
 
-#include "Encode.h"
+#include "CharFreq.h"
 #include <iostream>
 using namespace std;
 
@@ -10,8 +10,8 @@ void countFrequency();
 
 int main() {
 
-  Encode encodeFile = *new Encode();
-  encodeFile.countFrequency();
+  CharFreq freq = *new CharFreq();
+  freq.countFrequency();
 
   return 0;
 }

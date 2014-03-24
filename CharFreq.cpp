@@ -2,20 +2,31 @@
 // Chris Nicholl - X00073131
 // Gary Francis Smith - X00080112
 
-#include "Encode.h"
+/******************************************************************************
+ *    Some code obtained from:
+ *
+ *    Title: C++ Tutorial #14, STL Maps (1)
+ *    Author: zaychenok
+ *    Date: 2008
+ *    Code version: 1.0
+ *    Availability: https://www.youtube.com/watch?v=yW9OQu2XNNA
+ *
+ ******************************************************************************/
+
+#include "CharFreq.h"
 #include <map>
 #include <fstream>
 #include <iostream>
 using namespace std;
 
 // Constructor
-Encode::Encode() {
+CharFreq::CharFreq() {
 
 };
 
 // Take input from file and count the frequency of each letter.
 // Bool return true if file exists, returns false if file doesn't exist.
-void Encode::countFrequency() {
+void CharFreq::countFrequency() {
   string inputText;
   ifstream inFile;
 
@@ -33,11 +44,14 @@ void Encode::countFrequency() {
     for (char& nextChar : inputText) {
       freqMap[nextChar] += 1;
     }
+    // For every new word, increase space count by 1
+    freqMap[' '] += 1;
   }
 
   // Print out frequencies
-  for (int i = 0; i < freqMap.size(); i++) {
-    cout << freqMap[i] << endl;
+  for (map <char, int> :: const_iterator i = freqMap.begin();
+       i != freqMap.end(); ++i) {
+    cout << i->first << " : " << i->second << endl;
   }
 
   // Close
