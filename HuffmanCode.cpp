@@ -1,8 +1,13 @@
+// ADS2 CA1
+// Chris Nicholl - X00073131
+// Gary Francis Smith - X00080112
+
 #include "HuffmanCode.h"
 #include <iostream>
 #include <utility>
 #include <fstream>
 #include <queue>
+#include "TreeNode.h"
 using namespace std;
 
 HuffmanCode::HuffmanCode(){
@@ -52,14 +57,14 @@ void HuffmanCode::countFrequency() {
   // Close
   inFile.close();
 };
-/*
+
 void HuffmanCode::buildQueue() {
   // Add items to queue
   for(map <char,int> :: const_iterator it = freqMap.begin();
       it != freqMap.end(); ++it){
-    priQ.push(*new HuffmanNode(it->first, it->second));
+    priQ.push(TreeNode(it->first, it->second));
   }
-};*/
+};
 
 void HuffmanCode::buildHeap(){
   //fill heap

@@ -1,5 +1,7 @@
-//Gary Smith
-//Chris Nicholl
+// ADS2 CA1
+// Chris Nicholl - X00073131
+// Gary Francis Smith - X00080112
+
 /***************************************************************************************
 *    Title: <title of program/source code>
 *    Author: <author(s) names>
@@ -39,7 +41,7 @@ public:
 	}
 };
 
-int main(){
+/*int main(){
 	int shifts = 0;
 
 	ifstream ifs("input.txt");
@@ -64,4 +66,4 @@ int main(){
 	cout << input << endl;
 	system("PAUSE");
 	return 0;
-}
+}*/

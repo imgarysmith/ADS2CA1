@@ -1,3 +1,7 @@
+// ADS2 CA1
+// Chris Nicholl - X00073131
+// Gary Francis Smith - X00080112
+
 #include "BinaryHeap.h"
 #include <iostream>
 using namespace std;
