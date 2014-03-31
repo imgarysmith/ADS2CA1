@@ -30,7 +30,6 @@ public:
     int getHeapSize()                           {return heapSize;};
     HuffmanNode* getRoot()                      {return storage[0];};
     //traversal
-    //not really necessary for Huffman, left for debug purposes
     void inOrderTraversal();
     void postOrderTraversal();
     void preOrderTraversal();
