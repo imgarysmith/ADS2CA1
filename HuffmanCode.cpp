@@ -2,16 +2,13 @@
 #include <iostream>
 #include <utility>
 #include <fstream>
+#include <queue>
 using namespace std;
 
 HuffmanCode::HuffmanCode(){
 	encodedData = "";
 	countFrequency();
 	buildHeap();
-}
-
-HuffmanCode::~HuffmanCode(){
-	if(heap != NULL) delete heap;
 }
 
 void HuffmanCode::countFrequency() {
@@ -26,7 +23,6 @@ void HuffmanCode::countFrequency() {
   // Check file exists
   if (!inFile) {
     cout << "Can't open file.";
-    //return false;
   }
 
   // While text still in file
@@ -42,17 +38,27 @@ void HuffmanCode::countFrequency() {
     data += " ";
   }
 
+  // Print out frequency map
   cout << "Frequency Map: " << endl;
   for (map <char, int> :: const_iterator i = freqMap.begin();
-    i != freqMap.end(); ++i) {
-      cout << i->first << " : " << i->second << endl;
-      }
+       i != freqMap.end(); ++i) {
+    cout << i->first << " : " << i->second << endl;
+  }
   cout << endl;
 
+  // Create heap with length of text
   heap = new BinaryHeap(fileLength);
 
   // Close
   inFile.close();
+};
+
+void HuffmanCode::buildQueue() {
+  // Add items to queue
+  for(map <char,int> :: const_iterator it = freqMap.begin();
+      it != freqMap.end(); ++it){
+    priQ.push(*new HuffmanNode(it->first, it->second));
+  }
 };
 
 void HuffmanCode::buildHeap(){

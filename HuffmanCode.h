@@ -2,9 +2,9 @@
 #define HUFFMANCODE_H
 #include <string>
 #include <map>
-#include"BinaryHeap.h"
-using std::string;
-using std::map;
+#include "BinaryHeap.h"
+#include <queue>
+using namespace std;
 
 class HuffmanCode{
 private:
@@ -17,9 +17,9 @@ private:
 	void getHuffmanEncoding(HuffmanNode*, string);
 	void encode();
   map <char, int> freqMap = {{' ',-1}};
+  priority_queue <HuffmanNode> priQ;
 public:
 	HuffmanCode();
-	~HuffmanCode();
 	string getSourceString()						{return data;};
 	string getEncodedString()						{return encodedData;};
 	void displayTable();
@@ -28,9 +28,6 @@ public:
 	string decodeString(string);
   void countFrequency();
   void printMap();
-
-	//debug
-	void emptyHeap()								{heap->emptyHeap();};
+  void buildQueue();
 };
 #endif
-
