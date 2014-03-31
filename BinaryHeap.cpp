@@ -63,7 +63,7 @@ int BinaryHeap::numChildren(int index){
  
 void BinaryHeap::percDown(int curIndex){
     int children = 0;
-    if(children = numChildren(curIndex)){ //are we at the "bottom"?
+    if((children = numChildren(curIndex))){ //are we at the "bottom"?
         HuffmanNode* temp;
         int left = 2*curIndex+1, right = 2*curIndex+2;
         switch(children){ //1 child or 2 children

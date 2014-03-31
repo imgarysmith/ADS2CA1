@@ -13,8 +13,9 @@ int main() {
   HuffmanCode* test = new HuffmanCode();
   test->displayHuffmanTable();
   string code = test->getEncodedString();
+  string decode = test->getEncodedString2();
   cout << "Encoded string: " << code << endl;
-  cout << "Decoded string: " << test->decodeString(code) << endl;
+  cout << "Decoded string: " << test->decodeString(decode) << endl;
   delete test;
 
   return 0;

@@ -52,14 +52,14 @@ void HuffmanCode::countFrequency() {
   // Close
   inFile.close();
 };
-
+/*
 void HuffmanCode::buildQueue() {
   // Add items to queue
   for(map <char,int> :: const_iterator it = freqMap.begin();
       it != freqMap.end(); ++it){
     priQ.push(*new HuffmanNode(it->first, it->second));
   }
-};
+};*/
 
 void HuffmanCode::buildHeap(){
   //fill heap
@@ -103,8 +103,14 @@ void HuffmanCode::displayHuffmanTable(){
 void HuffmanCode::encode(){
 	for(size_t i = 0; i < data.length(); i++){
 		encodedData.append(huffmanTable[data.at(i)]);
-		encodedData.append(" ");
+    encodedData2.append(huffmanTable[data.at(i)]);
+		encodedData2.append(" ");
 	}
+  // Write to file
+  ofstream fileOut;
+    fileOut.open ("encoded.txt");
+    fileOut << encodedData;
+    fileOut.close();
 }
 
 string HuffmanCode::decodeString(string src){
@@ -123,6 +129,11 @@ string HuffmanCode::decodeString(string src){
 			}
 		}
 	}
+  // Write to file
+  ofstream fileOut;
+  fileOut.open ("decoded.txt");
+  fileOut << info;
+  fileOut.close();
 	return info;
 }
 

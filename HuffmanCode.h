@@ -10,6 +10,7 @@ class HuffmanCode{
 private:
 	string data;
 	string encodedData;
+  string encodedData2;
 	BinaryHeap* heap;
 	map<char, int> frequencyTable;
 	map<char, string> huffmanTable;
@@ -22,6 +23,7 @@ public:
 	HuffmanCode();
 	string getSourceString()						{return data;};
 	string getEncodedString()						{return encodedData;};
+	string getEncodedString2()					{return encodedData2;};
 	void displayTable();
 	void displayHeap();
 	void displayHuffmanTable();
