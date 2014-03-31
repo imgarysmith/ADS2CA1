@@ -62,7 +62,7 @@ void HuffmanCode::buildQueue() {
   // Add items to queue
   for(map <char,int> :: const_iterator it = freqMap.begin();
       it != freqMap.end(); ++it){
-    priQ.push(TreeNode(it->first, it->second));
+    //priQ.push(TreeNode(it->first, it->second));
   }
 };
 

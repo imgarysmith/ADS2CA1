@@ -1,5 +1,7 @@
-//Gary Smith
-//Chris Nicholl
+// ADS2 CA1
+// Chris Nicholl - X00073131
+// Gary Francis Smith - X00080112
+
 /********************************************************
 * 
 *	Title: Vigenère_cipher
@@ -9,6 +11,7 @@
 *	Availability: http://rosettacode.org/wiki/Vigen%C3%A8re_cipher/Cryptanalysis
 *
 *********************************************************/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -143,7 +146,7 @@ public:
     return make_pair(result, key);
   }
 };
- 
+ /*
 int main() 
 {
  ifstream ifs("secret.txt");
@@ -165,3 +168,4 @@ int main()
 
   system("PAUSE");
 }
+*/
