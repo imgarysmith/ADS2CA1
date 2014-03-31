@@ -11,15 +11,18 @@ void countFrequency();
 
 int main() {
 
-  /*HuffmanCode* test = new HuffmanCode();
+  // Huffman encoding
+  HuffmanCode* test = new HuffmanCode();
   test->displayHuffmanTable();
   string code = test->getEncodedString();
   string decode = test->getEncodedString2();
-  cout << "Encoded string: " << code << endl;
-  cout << "Decoded string: " << test->decodeString(decode) << endl;
-  delete test;*/
+  //cout << "Encoded string: " << code << endl;
+  //cout << "Decoded string: " << test->decodeString(decode) << endl;
+  delete test;
 
-  Caesar();
+
+  // Test Caesar encryption
+  //Caesar();
 
   return 0;
 }
