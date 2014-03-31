@@ -13,7 +13,6 @@ private:
     BinaryHeap* heap;
     map<char, int> frequencyTable;
     map<char, string> huffmanTable;
-    void buildTable();
     void buildHeap();
     void getHuffmanEncoding(HuffmanNode*, string);
     void encode();

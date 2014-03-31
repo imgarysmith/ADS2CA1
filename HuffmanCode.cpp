@@ -9,24 +9,11 @@ HuffmanCode::HuffmanCode(string src){
 	//worst case scenario, all unique characters
 	//must accomodate
 	heap = new BinaryHeap(data.length());
-	buildTable();
 	buildHeap();
 }
 
 HuffmanCode::~HuffmanCode(){
 	if(heap != NULL) delete heap;
-}
-
-void HuffmanCode::buildTable(){
-	for(size_t i = 0; i < data.length(); i++){
-		char c = data.at(i);
-		if (frequencyTable.find(data.at(i)) == frequencyTable.end()){
-			frequencyTable.insert(pair<char, int>(c, 1));
-		}
-		else{
-			frequencyTable[c]++;
-		}
-	}
 }
 
 void HuffmanCode::buildHeap(){
